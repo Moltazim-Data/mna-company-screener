@@ -1,0 +1,18 @@
+{
+  "mandate_id": "M-2026-014",
+  "buyer": "Fictional Austrian industrial group (strategic buyer)",
+  "target_profile": "Industrial software, automation and IoT companies in the DACH region",
+  "hard_criteria": {
+    "countries": ["AT", "DE", "CH"],
+    "sectors": ["Industrial Software", "Automation", "IoT"],
+    "revenue_eur_m": {"min": 5, "max": 50},
+    "excluded_owners": ["State"]
+  },
+  "soft_criteria": {
+    "min_ebitda_margin": 0.10,
+    "min_revenue_growth": 0.05,
+    "max_employees": 400
+  },
+  "borderline_tolerance": 0.10,
+  "red_flags": ["litigation", "insolvency", "customer concentration", "sanctions", "restructuring"]
+}

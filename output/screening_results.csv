@@ -1,0 +1,31 @@
+company_id,name,label,rationale,source,rule_label,score
+C001,Alpenlogic Systems GmbH,fit,"Meets all criteria: Industrial Software, AT, EUR 18.4m revenue, 17% EBITDA margin, 12% growth.",rules,fit,100
+C002,Nordwerk Automation AG,fit,"Meets all criteria: Automation, DE, EUR 42.0m revenue, 13% EBITDA margin, 7% growth.",rules,fit,100
+C003,Helvetia Sensorik AG,fit,"Meets all criteria: IoT, CH, EUR 9.8m revenue, 21% EBITDA margin, 18% growth.",rules,fit,100
+C004,Danube Data Tools GmbH,no_fit,Fails hard criteria: revenue EUR 3.2m outside EUR 5-50m.,rules,no_fit,0
+C005,Rheintal Steuerungstechnik GmbH,maybe,Misses: EBITDA margin 8% vs min 10%.,rules,maybe,70
+C006,Bergmann Fertigungs-IT GmbH,maybe,Misses: revenue growth 2% vs min 5%.,rules,maybe,70
+C007,Lago Robotics SA,no_fit,Fails hard criteria: country IT outside AT/DE/CH.,rules,no_fit,0
+C008,Tirol IoT Solutions GmbH,maybe,"Meets all criteria: IoT, AT, EUR 12.1m revenue, 12% EBITDA margin, 9% growth. Red flag in description: litigation -> needs review.",rules,maybe,80
+C009,Stadtwerke Digital GmbH,no_fit,Fails hard criteria: owner type 'State' excluded.,rules,no_fit,0
+C010,Zürcher Prozessautomation AG,fit,"Meets all criteria: Automation, CH, EUR 48.9m revenue, 19% EBITDA margin, 11% growth.",rules,fit,100
+C011,Westfalen Maschinensoftware GmbH,maybe,Misses: EBITDA margin 9% vs min 10%.,rules,maybe,70
+C012,Böhmerwald Analytics s.r.o.,no_fit,Fails hard criteria: country CZ outside AT/DE/CH.,rules,no_fit,0
+C013,Salzach Antriebstechnik GmbH,no_fit,Fails hard criteria: sector 'Machinery' not in target sectors.,rules,no_fit,0
+C014,Bodensee Vision GmbH,maybe,"Meets all criteria: Automation, DE, EUR 14.6m revenue, 22% EBITDA margin, 16% growth. Red flag in description: customer concentration -> needs review.",rules,maybe,80
+C015,Linz Edge Computing GmbH,fit,"Meets all criteria: IoT, AT, EUR 6.3m revenue, 10% EBITDA margin, 25% growth.",rules,fit,100
+C016,Bayern Smart Factory AG,no_fit,Fails hard criteria: revenue EUR 58.0m outside EUR 5-50m.,rules,no_fit,0
+C017,Genfer Automatisierung SA,no_fit,Misses: EBITDA margin 4% vs min 10%; revenue growth 3% vs min 5%.,rules,no_fit,40
+C018,Steirische Messtechnik GmbH,fit,"Meets all criteria: IoT, AT, EUR 19.2m revenue, 13% EBITDA margin, 6% growth.",rules,fit,100
+C019,Hamburg Supply Chain IT GmbH,maybe,"Meets all criteria: Industrial Software, DE, EUR 22.0m revenue, 14% EBITDA margin, 10% growth. Red flag in description: restructuring -> needs review.",rules,maybe,80
+C020,Wiener Robotik Werkstatt GmbH,maybe,Misses: revenue growth 4% vs min 5%.,rules,maybe,70
+C021,Basel Industrial Cloud AG,fit,"Meets all criteria: Industrial Software, CH, EUR 30.5m revenue, 20% EBITDA margin, 22% growth.",rules,fit,100
+C022,Sachsen Sensor Systems GmbH,no_fit,Fails hard criteria: revenue EUR 4.6m outside EUR 5-50m.,rules,no_fit,0
+C023,Kärntner Automations GmbH,fit,"Meets all criteria: Automation, AT, EUR 16.0m revenue, 10% EBITDA margin, 5% growth.",rules,fit,100
+C024,Pannonia Digital Kft.,no_fit,Fails hard criteria: country HU outside AT/DE/CH.,rules,no_fit,0
+C025,Ruhr Anlagen-Software GmbH,maybe,Borderline: employees 420 vs max 400.,rules,maybe,85
+C026,Innsbruck Precision IoT GmbH,maybe,Misses: EBITDA margin 9% vs min 10%.,rules,maybe,70
+C027,Frankfurt Fabrikdaten AG,maybe,"Meets all criteria: Industrial Software, DE, EUR 26.0m revenue, 16% EBITDA margin, 13% growth. Red flag in description: sanctions -> needs review.",rules,maybe,80
+C028,Luzern Mechatronik AG,fit,"Meets all criteria: Automation, CH, EUR 11.8m revenue, 18% EBITDA margin, 7% growth.",rules,fit,100
+C029,Graz Industrial AI GmbH,maybe,Misses: EBITDA margin 6% vs min 10%.,rules,maybe,70
+C030,Köln Prozessleittechnik GmbH,maybe,Misses: revenue growth 4% vs min 5%.,rules,maybe,70

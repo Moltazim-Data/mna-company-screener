@@ -1,0 +1,42 @@
+{
+  "n": 30,
+  "accuracy": 0.9,
+  "matrix": {
+    "fit": {
+      "fit": 9,
+      "maybe": 1,
+      "no_fit": 0
+    },
+    "maybe": {
+      "fit": 0,
+      "maybe": 9,
+      "no_fit": 0
+    },
+    "no_fit": {
+      "fit": 0,
+      "maybe": 2,
+      "no_fit": 9
+    }
+  },
+  "errors": [
+    {
+      "company_id": "C008",
+      "name": "Tirol IoT Solutions GmbH",
+      "analyst": "no_fit",
+      "screener": "maybe"
+    },
+    {
+      "company_id": "C019",
+      "name": "Hamburg Supply Chain IT GmbH",
+      "analyst": "fit",
+      "screener": "maybe"
+    },
+    {
+      "company_id": "C027",
+      "name": "Frankfurt Fabrikdaten AG",
+      "analyst": "no_fit",
+      "screener": "maybe"
+    }
+  ],
+  "dangerous_errors": 0
+}

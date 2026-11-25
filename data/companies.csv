@@ -1,0 +1,31 @@
+company_id,name,country,sector,revenue_eur_m,ebitda_margin,revenue_growth,employees,owner_type,description
+C001,Alpenlogic Systems GmbH,AT,Industrial Software,18.4,0.17,0.12,140,Founder,MES software for mid-sized machine builders; 85% recurring revenue.
+C002,Nordwerk Automation AG,DE,Automation,42.0,0.13,0.07,310,Family,Robot cell integration for food and packaging plants.
+C003,Helvetia Sensorik AG,CH,IoT,9.8,0.21,0.18,65,VC-backed,Wireless condition-monitoring sensors with SaaS dashboard.
+C004,Danube Data Tools GmbH,AT,Industrial Software,3.2,0.15,0.3,28,Founder,"Predictive maintenance app; early stage, fast growing."
+C005,Rheintal Steuerungstechnik GmbH,DE,Automation,27.5,0.08,0.06,220,Family,PLC programming services for automotive suppliers.
+C006,Bergmann Fertigungs-IT GmbH,DE,Industrial Software,33.0,0.11,0.02,260,Private Equity,ERP add-ons for discrete manufacturing; flat growth.
+C007,Lago Robotics SA,IT,Automation,21.0,0.16,0.14,150,Founder,Collaborative robots for small factories in Northern Italy.
+C008,Tirol IoT Solutions GmbH,AT,IoT,12.1,0.12,0.09,90,Founder,Smart-building sensors; ongoing litigation with a former distributor over patent rights.
+C009,Stadtwerke Digital GmbH,AT,IoT,15.0,0.14,0.08,120,State,Smart-meter platform owned by a municipal utility.
+C010,Zürcher Prozessautomation AG,CH,Automation,48.9,0.19,0.11,380,Family,Process automation for pharma clean rooms.
+C011,Westfalen Maschinensoftware GmbH,DE,Industrial Software,7.4,0.09,0.06,55,Founder,CAM software for woodworking machines.
+C012,Böhmerwald Analytics s.r.o.,CZ,Industrial Software,11.0,0.18,0.2,80,Founder,Production analytics for glass manufacturers.
+C013,Salzach Antriebstechnik GmbH,AT,Machinery,36.0,0.12,0.05,290,Family,"Gearboxes and drives; hardware only, no software offering."
+C014,Bodensee Vision GmbH,DE,Automation,14.6,0.22,0.16,105,VC-backed,Machine-vision quality inspection; 62% of revenue comes from one automotive customer (customer concentration).
+C015,Linz Edge Computing GmbH,AT,IoT,6.3,0.1,0.25,48,Founder,Edge gateways connecting legacy machines to the cloud.
+C016,Bayern Smart Factory AG,DE,Industrial Software,58.0,0.15,0.09,450,Private Equity,Full-stack smart-factory suite; above revenue range.
+C017,Genfer Automatisierung SA,CH,Automation,24.0,0.04,0.03,200,Family,Conveyor control systems; margins under pressure.
+C018,Steirische Messtechnik GmbH,AT,IoT,19.2,0.13,0.06,160,Founder,Industrial measurement sensors with cloud analytics.
+C019,Hamburg Supply Chain IT GmbH,DE,Industrial Software,22.0,0.14,0.1,175,Founder,"Warehouse management software; restructuring completed in 2024, now profitable."
+C020,Wiener Robotik Werkstatt GmbH,AT,Automation,8.9,0.11,0.04,70,Founder,Robot programming and training services.
+C021,Basel Industrial Cloud AG,CH,Industrial Software,30.5,0.2,0.22,240,VC-backed,Cloud historian for chemical plants; strong net revenue retention.
+C022,Sachsen Sensor Systems GmbH,DE,IoT,4.6,0.12,0.11,40,Founder,Vibration sensors for wind turbines.
+C023,Kärntner Automations GmbH,AT,Automation,16.0,0.1,0.05,130,Family,Automation retrofits for paper mills.
+C024,Pannonia Digital Kft.,HU,IoT,13.0,0.16,0.15,110,Founder,Fleet telematics for construction equipment.
+C025,Ruhr Anlagen-Software GmbH,DE,Industrial Software,40.0,0.12,0.08,420,Family,Plant engineering software; slightly above employee limit.
+C026,Innsbruck Precision IoT GmbH,AT,IoT,10.5,0.09,0.12,85,Founder,Asset tracking tags for hospitals and factories.
+C027,Frankfurt Fabrikdaten AG,DE,Industrial Software,26.0,0.16,0.13,190,Founder,OEE analytics; company is under sanctions review due to a Russian shareholder.
+C028,Luzern Mechatronik AG,CH,Automation,11.8,0.18,0.07,95,Family,Mechatronic assemblies with embedded control software.
+C029,Graz Industrial AI GmbH,AT,Industrial Software,5.4,0.06,0.4,45,VC-backed,"AI-based scheduling for job shops; loss-making until 2025, now near break-even."
+C030,Köln Prozessleittechnik GmbH,DE,Automation,45.0,0.14,0.04,350,Private Equity,Distributed control systems for utilities.
