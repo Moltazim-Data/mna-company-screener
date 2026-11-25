@@ -82,7 +82,7 @@ def screen_company(c: Company, mandate: dict) -> Result:
             reasons.append("Red flag in description: " + ", ".join(flags) + " -> needs review.")
 
     score = 0 if hard_fails else max(0, 100 - 30 * len(soft_fails) - 15 * len(borderline) - 20 * len(flags))
-    return Result(c.company_id, c.name, label, " ".join(reasons), "rules", label, score, checks)
+    return Result(c.company_id, c.name, label, " ".join(reasons), "rules", label, score, checks=checks)
 
 
 def screen_all(companies, mandate) -> list[Result]:

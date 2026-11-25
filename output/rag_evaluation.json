@@ -1,0 +1,93 @@
+{
+  "n": 12,
+  "k": 3,
+  "hit@1": 0.8333333333333334,
+  "hit@3": 0.9166666666666666,
+  "mrr": 0.875,
+  "items": [
+    {
+      "company_id": "C008",
+      "question": "Is the company involved in litigation, lawsuits or court cases?",
+      "expected": "lawsuit",
+      "rank": 1,
+      "top_chunk": "C008#5"
+    },
+    {
+      "company_id": "C008",
+      "question": "Is anyone suing the company over its technology?",
+      "expected": "lawsuit",
+      "rank": 1,
+      "top_chunk": "C008#5"
+    },
+    {
+      "company_id": "C027",
+      "question": "Is there any sanctions, ownership or compliance risk?",
+      "expected": "sanctions review",
+      "rank": 1,
+      "top_chunk": "C027#5"
+    },
+    {
+      "company_id": "C027",
+      "question": "Are payments to shareholders blocked?",
+      "expected": "frozen",
+      "rank": 1,
+      "top_chunk": "C027#5"
+    },
+    {
+      "company_id": "C019",
+      "question": "Has the company gone through restructuring, losses or insolvency, and is it resolved?",
+      "expected": "restructuring programme",
+      "rank": 1,
+      "top_chunk": "C019#5"
+    },
+    {
+      "company_id": "C019",
+      "question": "Was the bank debt refinanced?",
+      "expected": "refinanced",
+      "rank": 1,
+      "top_chunk": "C019#6"
+    },
+    {
+      "company_id": "C014",
+      "question": "Does the company depend on one large customer?",
+      "expected": "62%",
+      "rank": 1,
+      "top_chunk": "C014#5"
+    },
+    {
+      "company_id": "C014",
+      "question": "How long does the contract with the biggest client run?",
+      "expected": "2029",
+      "rank": 1,
+      "top_chunk": "C014#5"
+    },
+    {
+      "company_id": "C029",
+      "question": "When did the company become profitable?",
+      "expected": "break-even",
+      "rank": 1,
+      "top_chunk": "C029#5"
+    },
+    {
+      "company_id": "C009",
+      "question": "Who owns the company?",
+      "expected": "municipal utility",
+      "rank": 2,
+      "top_chunk": "C009#2"
+    },
+    {
+      "company_id": "C003",
+      "question": "What does the company sell?",
+      "expected": "sensors",
+      "rank": null,
+      "top_chunk": "C003#3"
+    },
+    {
+      "company_id": "C006",
+      "question": "Is revenue growing?",
+      "expected": "flat",
+      "rank": 1,
+      "top_chunk": "C006#5"
+    }
+  ]
+}

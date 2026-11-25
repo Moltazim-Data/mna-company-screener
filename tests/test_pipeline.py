@@ -39,7 +39,7 @@ def test_llm_review_only_touches_maybes(data):
     before = {r.company_id: r.label for r in results}
     calls = []
 
-    def fake_ask(company, mandate, rule, api_key):
+    def fake_ask(company, mandate, rule, api_key, evidence=None):
         calls.append(company.company_id)
         text = company.description.lower()
         if "sanctions" in text or "litigation" in text:
@@ -67,8 +67,9 @@ def test_llm_errors_keep_rule_result(data):
 
 def test_cli_writes_all_outputs(tmp_path):
     assert main(["--companies", str(ROOT / "data/companies.csv"), "--mandate", str(ROOT / "data/mandate.json"),
-                 "--labels", str(ROOT / "data/eval_labels.csv"), "--out", str(tmp_path)]) == 0
-    for name in ["screening_results.csv", "screening_results.xlsx", "screening_summary.pptx", "evaluation.json"]:
+                 "--labels", str(ROOT / "data/eval_labels.csv"), "--websites", str(ROOT / "data/websites"),
+                 "--rag-eval", str(ROOT / "data/rag_eval.json"), "--out", str(tmp_path)]) == 0
+    for name in ["screening_results.csv", "screening_results.xlsx", "screening_summary.pptx", "evaluation.json", "rag_evaluation.json"]:
         assert (tmp_path / name).exists()
     wb = load_workbook(tmp_path / "screening_results.xlsx")
     assert wb.sheetnames == ["Summary", "Screening", "Mandate"]

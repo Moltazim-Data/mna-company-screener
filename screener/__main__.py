@@ -8,7 +8,9 @@ from .evaluate import evaluate, format_report
 from .export_excel import export_excel
 from .export_pptx import export_pptx
 from .io import load_companies, load_labels, load_mandate
-from .llm import review_maybes
+from .evaluate_rag import evaluate_retrieval, format_rag_report, load_rag_eval
+from .llm import attach_evidence, review_maybes
+from .rag import build_index
 from .rules import screen_all
 
 
@@ -18,12 +20,17 @@ def main(argv=None):
     ap.add_argument("--mandate", default="data/mandate.json")
     ap.add_argument("--labels", default="data/eval_labels.csv", help="analyst labels for evaluation ('' to skip)")
     ap.add_argument("--out", default="output")
+    ap.add_argument("--websites", default="data/websites", help="folder with company websites (HTML) for RAG ('' to skip)")
+    ap.add_argument("--rag-eval", default="data/rag_eval.json", help="retrieval test set ('' to skip)")
     ap.add_argument("--llm", action="store_true", help="review 'maybe' cases with an LLM (needs ANTHROPIC_API_KEY)")
     args = ap.parse_args(argv)
 
     companies = load_companies(args.companies)
     mandate = load_mandate(args.mandate)
     results = screen_all(companies, mandate)
+    index = build_index(args.websites) if args.websites and Path(args.websites).is_dir() else None
+    if index:
+        results = attach_evidence(results, index)
     if args.llm:
         results = review_maybes(companies, results, mandate)
 
@@ -39,11 +46,18 @@ def main(argv=None):
     export_pptx(out / "screening_summary.pptx", companies, results, mandate)
     if ev:
         (out / "evaluation.json").write_text(json.dumps(ev, indent=2), encoding="utf-8")
+    rag_ev = None
+    if index and args.rag_eval and Path(args.rag_eval).exists():
+        rag_ev = evaluate_retrieval(index, load_rag_eval(args.rag_eval))
+        (out / "rag_evaluation.json").write_text(json.dumps(rag_ev, indent=2), encoding="utf-8")
 
     counts = {lab: sum(r.label == lab for r in results) for lab in ("fit", "maybe", "no_fit")}
     print(f"Screened {len(results)} companies -> {counts}")
     if ev:
         print(format_report(ev))
+    if rag_ev:
+        print()
+        print(format_rag_report(rag_ev))
     print(f"Files written to {out}/")
     return 0
 

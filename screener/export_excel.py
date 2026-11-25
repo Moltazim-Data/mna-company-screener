@@ -50,26 +50,26 @@ def export_excel(path, companies, results, mandate, ev=None):
     # Screening
     ws = wb.create_sheet("Screening")
     cols = ["ID", "Company", "Country", "Sector", "Revenue (EUR m)", "EBITDA margin", "Growth",
-            "Employees", "Owner", "Label", "Score", "Source", "Rationale"]
+            "Employees", "Owner", "Label", "Score", "Source", "Rationale", "Website evidence"]
     _header(ws, 1, cols)
     order = {"fit": 0, "maybe": 1, "no_fit": 2}
     for row, r in enumerate(sorted(results, key=lambda r: (order[r.label], -r.score)), start=2):
         c = by_id[r.company_id]
         vals = [c.company_id, c.name, c.country, c.sector, c.revenue_eur_m, c.ebitda_margin, c.revenue_growth,
-                c.employees, c.owner_type, r.label, r.score, r.source, r.rationale]
+                c.employees, c.owner_type, r.label, r.score, r.source, r.rationale, r.evidence]
         for col, v in enumerate(vals, start=1):
             cell = ws.cell(row, col, v)
             cell.border = Border(top=THIN, bottom=THIN, left=THIN, right=THIN)
-            cell.alignment = Alignment(vertical="top", wrap_text=(col == 13))
+            cell.alignment = Alignment(vertical="top", wrap_text=(col >= 13))
         ws.cell(row, 6).number_format = "0%"
         ws.cell(row, 7).number_format = "0%"
         ws.cell(row, 5).number_format = "0.0"
         ws.cell(row, 10).fill = PatternFill("solid", fgColor=FILL[r.label])
-    widths = [7, 32, 8, 18, 10, 9, 8, 10, 14, 9, 7, 10, 70]
+    widths = [7, 32, 8, 18, 10, 9, 8, 10, 14, 9, 7, 10, 60, 60]
     for i, w in enumerate(widths, start=1):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = "C2"
-    ws.auto_filter.ref = f"A1:M{len(results) + 1}"
+    ws.auto_filter.ref = f"A1:N{len(results) + 1}"
 
     # Mandate
     ws = wb.create_sheet("Mandate")

@@ -41,9 +41,12 @@ class Result:
     source: str = "rules"            # "rules" or "rules+llm"
     rule_label: str = ""
     score: int = 0                    # 0-100, higher = better fit
+    evidence: str = ""                # website passages found by retrieval (RAG)
     checks: dict = field(default_factory=dict)
+    evidence_items: list = field(default_factory=list)
 
     def to_dict(self) -> dict:
         d = asdict(self)
         d.pop("checks")
+        d.pop("evidence_items")
         return d

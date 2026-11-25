@@ -1,0 +1,17 @@
+{
+  "description": "Retrieval test set: for each question, the text that the correct chunk must contain (analyst-written).",
+  "items": [
+    {"company_id": "C008", "question": "Is the company involved in litigation, lawsuits or court cases?", "expected": "lawsuit"},
+    {"company_id": "C008", "question": "Is anyone suing the company over its technology?", "expected": "lawsuit"},
+    {"company_id": "C027", "question": "Is there any sanctions, ownership or compliance risk?", "expected": "sanctions review"},
+    {"company_id": "C027", "question": "Are payments to shareholders blocked?", "expected": "frozen"},
+    {"company_id": "C019", "question": "Has the company gone through restructuring, losses or insolvency, and is it resolved?", "expected": "restructuring programme"},
+    {"company_id": "C019", "question": "Was the bank debt refinanced?", "expected": "refinanced"},
+    {"company_id": "C014", "question": "Does the company depend on one large customer?", "expected": "62%"},
+    {"company_id": "C014", "question": "How long does the contract with the biggest client run?", "expected": "2029"},
+    {"company_id": "C029", "question": "When did the company become profitable?", "expected": "break-even"},
+    {"company_id": "C009", "question": "Who owns the company?", "expected": "municipal utility"},
+    {"company_id": "C003", "question": "What does the company sell?", "expected": "sensors"},
+    {"company_id": "C006", "question": "Is revenue growing?", "expected": "flat"}
+  ]
+}
